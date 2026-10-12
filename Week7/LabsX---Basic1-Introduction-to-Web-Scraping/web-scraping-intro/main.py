@@ -1,3 +1,4 @@
+# web-scraping-intro/main.py
 import sys
 import os
 
@@ -19,15 +20,12 @@ def main():
     if scraped_data:
         print("\n--- ข้อมูลที่ Scrape ได้ ---")
         print(f"ชื่อหนังสือ: {scraped_data['book_title']}")
-
         print("\nชื่อบทต่างๆ:")
-
         if scraped_data['chapter_titles']:
             for i, title in enumerate(scraped_data['chapter_titles']):
                 print(f"{i+1}. {title}")
         else:
             print("ไม่พบชื่อบทใดๆ")
-
         print("--------------------")
     else:
         print("ไม่สามารถ scrape ข้อมูลได้")

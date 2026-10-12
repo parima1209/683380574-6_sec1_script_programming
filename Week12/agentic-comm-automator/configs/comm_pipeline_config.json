@@ -6,7 +6,7 @@
             "parameters": {
                 "recipients": {
                     "to": ["jantaranapha.n@kkumail.com"],
-                    "cc": ["your_gmail_address@gmail.com"]
+                    "cc": ["jantaranapha.n@kkumail.com"]
                 },
                 "subject_template": "Daily Sales Report - {report_date}",
                 "body_template": "Dear Team,\n\nPlease find the latest sales report for {report_date} attached. Total sales: ${sales_figure:.2f}. Total active customers: {total_customers}.\n\nBest regards,\nAutomated Agent",
@@ -37,7 +37,7 @@
                 "mailbox": "INBOX",
                 "search_criteria": {
                     "status": "UNSEEN",
-                    "from_sender": "your_gmail_address@gmail.com",
+                    "from_sender": "jantaranapha.n@kkumail.com",
                     "subject_contains": "Data Request"
                 },
                 "download_attachments_base_dir": "data/incoming_attachments",

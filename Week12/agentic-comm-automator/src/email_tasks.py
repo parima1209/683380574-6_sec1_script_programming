@@ -112,7 +112,7 @@ class EmailTasks:
             self._imap_mail.select(mailbox)
             search_query = [criteria]
             if from_sender: search_query.extend(['FROM', from_sender])
-            if subject_contains: search_query.extend(['SUBJECT', subject_contains])
+            if subject_contains: search_query.extend(['SUBJECT', f'"{subject_contains}"'])
 
             status, email_ids = self._imap_mail.search(None, *search_query)
             if status != 'OK': return []

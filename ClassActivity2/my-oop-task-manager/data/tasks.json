@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "description": "Read lab sheet",
+        "completed": true
+    },
+    {
+        "id": 2,
+        "description": "Write report",
+        "completed": false
+    }
+]

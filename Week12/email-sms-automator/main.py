@@ -69,7 +69,7 @@ def main():
         email_sender.send_email(
             recipient_email=test_recipient_email,
             subject="ทดสอบ Python Test Email with Attachment - Daily Report",
-            body=".",
+            body="จันทรณภา จอมทอง 683380574-6",
             attachment_path=attachment_file_path
         )
     else:
@@ -92,7 +92,7 @@ def main():
     email_sender.send_email(
         recipient_email=sender_email,  # Send to self
         subject="ทดสอบ Python Test: Email for Receiving Demo",
-        body="",
+        body="จันทรณภา จอมทอง 683380574-6",
         attachment_path=attachment_file_path if os.path.exists(attachment_file_path) else None
     )
     logger.info("Sent a demo email to self for receiving task. Waiting a few seconds...")

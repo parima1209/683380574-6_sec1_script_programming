@@ -1,68 +1,47 @@
-\# Week 8: Automating with CSV and JSON Data
+# Week 8: Automating with CSV and JSON Data
 
+**จัดทำโดย:** จันทรณภา จอมทอง 683380574-6 (อ้างอิงจากตัวอย่างของอาจารย์)
 
+This project focuses on programmatic interaction with two fundamental structured plaintext data formats: CSV (Comma Separated Values) and JSON (JavaScript Object Notation), using Python's built-in `csv` and `json` modules.
 
-\*\*จัดทำโดย:\*\* จันทรณภา จอมทอง 683380574-6 
+## Implemented Features
 
+* **CSV Reading (DictReader)**: Reads CSV files using the first row as headers, so each row is a dictionary.
+* **CSV Writing (DictWriter)**: Writes lists of dictionaries back to CSV with proper headers.
+* **CSV Data Processing**: Calculates total sales and average price, and filters records by a minimum amount.
+* **JSON Reading (`json.load`)**: Parses JSON files into Python lists and dictionaries.
+* **JSON Writing (`json.dump`)**: Saves Python objects to JSON with pretty-printing.
+* **JSON Data Manipulation**: Updates stock levels of existing products and adds a new product.
+* **Modular Design**: Logic is split into `csv_handler.py`, `json_handler.py`, and `utils.py`.
+* **Robustness**: Basic error handling for file operations and data parsing.
 
+## How to Run
 
-โปรเจกต์นี้ฝึกการอ่าน เขียน และประมวลผลไฟล์ CSV และ JSON ด้วยโมดูล `csv` และ `json` ของ Python
+```bash
+cd Week8/data-processor
+python main.py
+```
 
+No extra packages are needed (`csv` and `json` are built-in).
 
+## Output
 
-\## ความสามารถ
+* `data/output_filtered_sales.csv` — filtered sales records plus a summary row.
+* `data/output_updated_inventory.json` — updated product inventory.
 
-\* \*\*อ่าน CSV (DictReader)\*\*: อ่านไฟล์ CSV โดยใช้แถวแรกเป็นหัวตาราง
+## Project Structure
 
-\* \*\*เขียน CSV (DictWriter)\*\*: เขียนข้อมูลแบบ dictionary กลับเป็นไฟล์ CSV
-
-\* \*\*ประมวลผล CSV\*\*: คำนวณยอดขายรวม ราคาเฉลี่ย และกรองรายการตามเงื่อนไข
-
-\* \*\*อ่าน/เขียน JSON\*\*: ใช้ `json.load` และ `json.dump` (จัดรูปแบบให้อ่านง่าย)
-
-\* \*\*แก้ไขข้อมูล JSON\*\*: อัปเดตสต็อกสินค้าและเพิ่มสินค้าใหม่
-
-\* \*\*แยกโมดูล\*\*: `csv\_handler.py`, `json\_handler.py`, `utils.py`
-
-
-
-\## วิธีรัน
-
-&#x20;   python main.py
-
-
-
-\## ผลลัพธ์
-
-\* `data/output\_filtered\_sales.csv` — รายการขายที่ผ่านการกรอง พร้อมแถวสรุป
-
-\* `data/output\_updated\_inventory.json` — ข้อมูลสินค้าคงคลังที่อัปเดตแล้ว
-
-
-
-\## โครงสร้างโปรเจกต์
-
-&#x20;   data-processor/
-
-&#x20;   ├── src/
-
-&#x20;   │   ├── \_\_init\_\_.py
-
-&#x20;   │   ├── csv\_handler.py
-
-&#x20;   │   ├── json\_handler.py
-
-&#x20;   │   └── utils.py
-
-&#x20;   ├── data/
-
-&#x20;   │   ├── input\_sales.csv
-
-&#x20;   │   └── input\_inventory.json
-
-&#x20;   ├── main.py
-
-&#x20;   ├── .gitignore
-
-&#x20;   └── README.md
-
+```
+data-processor/
+├── src/
+│   ├── __init__.py
+│   ├── csv_handler.py     # CSV read/write/process
+│   ├── json_handler.py    # JSON read/write/process
+│   └── utils.py           # Logging, file path helpers
+├── data/
+│   ├── input_sales.csv
+│   └── input_inventory.json
+├── main.py
+├── .gitignore
+└── README.md
+```
